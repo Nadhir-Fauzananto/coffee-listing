@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #212121;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 3em;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 2em;
+}
+
+h1, p, h2 {
+    margin: 0;
+    padding: 0;
+    color: #E9D2A8;
+}
+
+/* header */
+
+header {
+    background-color: #282828;
+    padding: 1.5em;
+}
+
+.header-text > h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.header-text > p {
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5em;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+    border-color: #C69E73;
+    border-radius: 10px;
+    background-color: #C69E73;
+    box-shadow: 0px 0px 4px #e7ba8a;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #E9D2A8;
+    color: #212121;
+    border-color: #E9D2A8;
+}
+
+/* card */
+
+
+.card-container {
+    padding: 1.5em;
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+/* on the photo */
+
+.coffee-popular {
+    color: black;
+    background-color: #C69E73;
+    font-size: 0.7rem;
+    padding: 0.3em 0.5em;
+    margin: 0.5em;
+    border-radius: 10px;
+}
+
+.coffee-img {
+    anchor-name: --coffee-img-anchor;
+    z-index: -10;
+    border-radius: 10px;
+}
+
+.coffee-popular {
+    position: absolute;
+    position-anchor: --coffee-img-anchor;
+    position-visibility: always;
+}
+
+/* outside photo */
+
+.star-icon {
+    width: 12px;
+}
+
+.coffee-name {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.coffee-image-outside {
+    display: flex;  
+    flex-direction: column; 
+    font-size: 0.8rem;
+}
+
+/* row one */
+
+.row-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.coffee-price, .coffee-available {
+    color: black;
+    background-color: #9E9368;
+    font-size: 0.8rem;
+    padding: 0.2em 0.5em;
+    border-radius: 10px;
+}
+
+.coffee-soldout {
+    color: whitesmoke;
+    background-color: #742C0D;
+    font-size: 0.8rem;
+    padding: 0.2em 0.5em;
+    border-radius: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+/* row two */
+
+.row-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-two-rating {
+    display: flex;
+}
+
+.coffee-rating {
+    margin-left: 0.3em;
+}
+
+/* for tablet */
+
+@media screen and (min-width: 700px) {
+    .coffee-data {
+        display: grid;
+        max-width: 1200px;
+        margin: auto;
+        grid-template-columns: auto auto;
+        margin-bottom: 0
+    }
+
+    .card-container {
+        margin-bottom: 3em;
+    }
+}
+
+/* for desktop */
+
+@media screen and (min-width: 1000px) {
+    header {
+        padding: 2em;
+    }
+
+    .header-text {
+        min-width: 800px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .header-text > h1 {
+        font-size: 3rem;
+    }
+
+    .header-text > p {
+        font-size: 1.5rem;
+    }
+
+    .coffee-data {
+        display: grid;
+        max-width: 1200px;
+        margin: auto;
+        grid-template-columns: auto auto auto;
+        padding-bottom: 3em;
+    }
+
+    .button-container {
+        justify-content: center;
+        gap: 2em;
+    }
+
+}
