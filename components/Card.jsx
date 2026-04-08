@@ -1,3 +1,5 @@
+import starIcon from "../assets/star.svg"
+
 export function Card(props) {
     var popular = ""
     if (props.popular) {
@@ -18,7 +20,7 @@ export function Card(props) {
                 </div>
                 <div className="row-two">
                     <div className="row-two-rating">
-                        <img className="star-icon" alt="star-icon" src="../assets/star.svg"></img>
+                        <img className="star-icon" alt="star-icon" src={starIcon}></img>
                         <p className="coffee-rating">{props.rating}</p>
                     </div>
                     <p className="coffee-votes">{props.votes} Votes</p>
